@@ -1,0 +1,138 @@
+html {
+    background-color: rgb(208, 208, 208);
+}
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 80%;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section .title {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.section .element-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+
+    margin: 40px 0;
+}
+
+.section .element-container .element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 250px;
+    height: fit-content;
+    margin: 20px;
+    border-radius: 20px;
+    padding-bottom: 40px;
+
+    background-color: tomato;
+}
+
+.section .element-container .element h1 {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.section .element-container .element .content {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    background-color: white;
+    border-top: 10px solid rgb(255, 138, 118);
+    border-bottom: 10px solid rgb(255, 138, 118);
+}
+
+.section .element-container .element .content p {
+    overflow: hidden;
+    height: 150px;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+}
+
+.section .element-container .element .content p[hide] {
+    
+    height: 0px;
+}
+
+.section .element-container .element .content button {
+    outline: none;
+    border: none;
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.section .element-container .element .content button:hover {
+    cursor: pointer;
+}
+
+.section .element-container .element .content img {
+    width: 150px;
+}
+
+.section .element-container .element.red {
+    background-color: rgb(213, 74, 67);
+}
+
+.section .element-container .element.red .content {
+    border-color: rgb(203, 61, 53);
+}
+
+.section .element-container .element.red .content button::before {
+    content: url(/imgs/triangle.svg);
+    
+}
+
+.section .element-container .element.red .content button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+.section .element-container .element.red .content button[hide] {
+    transform: rotate(0deg);
+}
