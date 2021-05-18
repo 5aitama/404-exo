@@ -28,15 +28,11 @@ async function setup() {
         }
     ];
 
-    let i = 0;
-
     for(const data of refactorData) {
         const section = new Section(data.title);
 
         for(const e of data.data)
             section.addItem(new Card(e));
-
-        i++;
     }
 
 }
