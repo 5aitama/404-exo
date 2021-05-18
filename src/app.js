@@ -27,12 +27,14 @@ async function setup() {
             data: data.frameworks.filter(e => e.tags.includes("crossplateform")),
         }
     ];
+    let i = 0;
 
     for(const data of refactorData) {
         const section = new Section(data.title);
 
         for(const e of data.data)
-            section.addItem(new Card(e));
+            section.addItem(new Card(e, i > 0));
+        i++;
     }
 
 }
