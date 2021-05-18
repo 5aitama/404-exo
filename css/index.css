@@ -53,10 +53,14 @@ body {
     width: 250px;
     height: fit-content;
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     padding-bottom: 40px;
 
     background-color: tomato;
+}
+
+.section .element-container .element.wsh {
+    border-radius: 40px;
 }
 
 .section .element-container .element h1 {
@@ -110,6 +114,7 @@ body {
 
 .section .element-container .element .content img {
     width: 150px;
+    height: 150px;
 }
 
 .section .element-container .element.red {

@@ -18,7 +18,7 @@ export default class Card extends ItemBase {
         const eButton   = document.createElement("button");
 
         // Setup attributes
-        eRoot.setAttribute("class", `element${isStatic ? " red" : ""}`);
+        eRoot.setAttribute("class", `element${isStatic ? " red wsh" : ""}`);
         eRoot.setAttribute("style", `background-color:${data.color}`);
         eContent.setAttribute("class", "content");
         eContent.setAttribute("style", `border-color:${data.secondColor}`);
@@ -34,9 +34,7 @@ export default class Card extends ItemBase {
         // Setup actions
         eButton.onclick = () => {
             eText.toggleAttribute("hide");
-            if(isStatic) {
-                eButton.toggleAttribute("hide");
-            }
+            if(isStatic) eButton.toggleAttribute("hide");
         }
 
         // Setup hierarchies
